@@ -8,7 +8,8 @@ You need a budget).
 
 ## Usage
 
-This is a java program. You will need JAVA to be installed in your machine (version 11+).
+This is a java program. You will need JAVA to be installed in your machine (version 11+). You can grab the application
+from the Release section.
 
 To execute the application run the following.
 
