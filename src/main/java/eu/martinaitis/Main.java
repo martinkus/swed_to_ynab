@@ -8,6 +8,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String... args) throws IOException {
+        if (args.length != 2) {
+            throw new RuntimeException("Bad input. Please provide in and out file paths");
+        }
+
         final Path inputPath = Path.of(args[0]);
         if (!inputPath.toFile().exists()) {
             throw new RuntimeException("No such file under path: " + args[0]);

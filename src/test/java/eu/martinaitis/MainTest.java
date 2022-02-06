@@ -14,13 +14,11 @@ class MainTest {
     private Path inPath;
     private Path outPath;
 
-    private static final String EXPECTED_CONTENTS = """
-            Date,Payee,Category,Memo,Outflow,Inflow
-            04/01/2021,Wolt 00180 Helsinki,,Memo 1,26.90,
-            04/01/2021,Some Membership,,Memo 2,6.05,
-            05/01/2021,,,Memo 3,0.70,
-            05/01/2021,Wolt 00180 Helsinki,,Memo 4,38.43,
-            """.replace("\n", "\r\n");
+    private static final String EXPECTED_CONTENTS = "Date,Payee,Category,Memo,Outflow,Inflow\r\n" +
+            "04/01/2021,Woltė 00180 Helsinki,,Memo 1,26.90,\r\n" +
+            "04/01/2021,Some Membership,,Memo 2,6.05,\r\n" +
+            "05/01/2021,,,Memo 3,0.70,\r\n" +
+            "05/01/2021,Wolt 00180 Helsinki,,Memo 4,38.43,\r\n";
 
     @BeforeEach
     public void setup() throws URISyntaxException, IOException {
