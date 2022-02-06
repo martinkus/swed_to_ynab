@@ -2,7 +2,8 @@
 
 ## Intro
 
-This program takes Swedbank statments extracted in csv format and converts them into a csv format understood by YNAB 4 (
+This CLI program takes Swedbank statments extracted in csv format and converts them into a csv format understood by YNAB
+4 (
 You need a budget).
 
 ## Usage
@@ -22,3 +23,11 @@ java -jar swed_to_ynab-1.0 input.csv output.csv
 ```
 
 This would in turn create a file `output.csv` which you could then import into YNAB 4
+
+## Building
+
+Application is built with maven.
+
+```shell
+mvn clean package
+```
