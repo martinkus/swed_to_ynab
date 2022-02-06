@@ -16,12 +16,14 @@ public class Main {
         if (!inputPath.toFile().exists()) {
             throw new RuntimeException("No such file under path: " + args[0]);
         }
+        System.out.println("Input  file: " + inputPath.toAbsolutePath());
 
         final Path outputPath = Path.of(args[1]);
         final File outFile = outputPath.toFile();
         if (!outFile.exists() && !outFile.createNewFile()) {
             throw new RuntimeException("No such file under path: " + args[1]);
         }
+        System.out.println("Output file: " + outputPath.toAbsolutePath());
 
 
         final SwedParser swedParser = new SwedParser();
@@ -30,8 +32,7 @@ public class Main {
 
         final YnabWriter ynabWriter = new YnabWriter();
         ynabWriter.write(ynabStrings, outFile);
-
-        ynabStrings.forEach(System.out::println);
+        System.out.println("Converted " + ynabStrings.size() + " transactions.");
     }
 
 }
